@@ -19,3 +19,16 @@ app.use(bodyParser.json());
 app.listen(getProperty('port'), () => {
   console.log('listening on port..' + getProperty('port'));
 });
+
+app.post('/register/hook', async (req: any, res: any) => {
+  const addressActivityWebhook = await alchemy.notify.createWebhook(
+    req.body.webhook,
+    WebhookType.ADDRESS_ACTIVITY,
+    {
+      addresses: req.body.address,
+      network: Network.ETH_MAINNET,
+    }
+  );
+  console.log(addressActivityWebhook);
+  res.json(addressActivityWebhook);
+});

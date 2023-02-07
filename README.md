@@ -11,8 +11,12 @@ Clone the project using git to your local director.
 CD to the main dir.
 
 npm install express
+
 npm i body-parser
+
 npm install alchemy-sdk
+
+npm i properties-reader
 
 ```bash
 ts-node index.ts
