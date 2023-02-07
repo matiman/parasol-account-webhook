@@ -3,6 +3,8 @@ This application let you register a webhook for account activities you wanted to
 
 The app requires you to register on alchemy and get an auth token. For this demo I created a dummy free account for you to use w/o setting up an alchemy account. You can change the auth token and network on app.properties file.
 
+[Contribution guidelines for this project](img/hook.png)
+
 # alchemy
 https://docs.alchemy.com/reference/sdk-create-webhook 
 
