@@ -1,0 +1,10 @@
+*.log
+npm-debug.log*
+node_modules
+.env
+dist
+package-lock.json
+.prettierrc.js
+.editorconfig
+.eslintignore
+.eslintrc.json
