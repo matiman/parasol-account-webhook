@@ -32,3 +32,8 @@ app.post('/register/hook', async (req: any, res: any) => {
   console.log(addressActivityWebhook);
   res.json(addressActivityWebhook);
 });
+
+app.post('/listen', (req: any, res: any) => {
+  console.log('listening registered webhook....');
+  console.log(req.body);
+});
