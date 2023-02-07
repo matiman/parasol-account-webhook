@@ -18,13 +18,24 @@ npm install alchemy-sdk
 
 npm i properties-reader
 
-In order to have the request come to your localhost, you can use ngrok https://dashboard.ngrok.com/get-started/setup but you can also see the requests on https://webhook.site/ 
+In order to have the request come to your localhost, you can use ngrok https://dashboard.ngrok.com/get-started/setup but you can also see the requests on https://webhook.site/. Make sure your ngrok is running locally before making requests. 
 
 Make sure to validate your webhook works before registering it.
 
 Finally run your application
 
 ts-node index.ts
+
+Once you run your application make POST request to
+<app server dir>/register/hook'
+
+Use the following json format
+
+{"address":
+["0xe592427a0aece92de3edee1f18e0157c05861564", "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0", "0xe592427a0aece92de3edee1f18e0157c05861564"],
+"webhook":"https://e5c0-2600-1700-87d3-9200-f98e-8b17-610-eb7e.ngrok.io/listen"}
+
+if successful, within few seconds your webhook should receive calls at <app server dir>/listen
 
 #What I would change
 1) The API isn't secure and can take any incoming request through the port. So I would secure the API.
